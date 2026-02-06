@@ -20,7 +20,7 @@ This document provides comprehensive deployment instructions for the Vector DB v
 - **Python**: 3.8 or higher
 - **RAM**: 2GB minimum (4GB recommended)
 - **Disk Space**: 500MB for application and dependencies
-- **Network**: Port 5000 must be available
+- **Network**: Port 8080 must be available
 
 ### Software Dependencies
 
@@ -31,14 +31,36 @@ This document provides comprehensive deployment instructions for the Vector DB v
 
 ## Installation Steps
 
-### 1. Clone the Repository
+### Option 1: Automated Setup (Recommended)
+
+The easiest way to get started:
+
+```bash
+cd /Users/alainairom/Devs/vectordb-vs-sqldb
+./scripts/launch.sh
+```
+
+This unified launcher automatically:
+- Checks Python installation
+- Creates virtual environment
+- Installs all dependencies
+- Creates necessary directories
+- Starts the application
+
+**That's it!** Open http://localhost:8080 in your browser.
+
+### Option 2: Manual Setup
+
+If you prefer manual control:
+
+#### 1. Clone the Repository
 
 ```bash
 git clone <your-repository-url>
 cd vectordb-vs-sqldb
 ```
 
-### 2. Verify Python Installation
+#### 2. Verify Python Installation
 
 ```bash
 python3 --version

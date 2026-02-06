@@ -2,24 +2,24 @@
 
 An educational demonstration application showcasing the differences between traditional SQL databases and Vector Databases.
 
-## 🚀 Quick Start (3 Steps)
+## 🚀 Quick Start (1 Command!)
 
-### 1. Install Dependencies (First Time Only)
+### Run the Application
 
 ```bash
 cd /Users/alainairom/Devs/vectordb-vs-sqldb
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+./scripts/launch.sh
 ```
 
-### 2. Run the Application
+**That's it!** The unified launcher automatically:
+- ✅ Checks Python installation
+- ✅ Creates virtual environment (if needed)
+- ✅ Installs all dependencies
+- ✅ Creates necessary directories
+- ✅ Clears port 8080 if occupied
+- ✅ Starts the server
 
-```bash
-./scripts/run.sh
-```
-
-### 3. Open in Browser
+### Open in Browser
 
 The console will display:
 ```
@@ -31,9 +31,9 @@ The console will display:
 
 **Open**: http://localhost:8080
 
-### 4. Stop the Application
+### Stop the Application
 
-Press `Ctrl+C` in the terminal
+Press `Ctrl+C` in the terminal where the application is running
 
 ---
 
@@ -80,13 +80,11 @@ All scripts are in the `scripts/` folder:
 
 | Script | Purpose | Usage |
 |--------|---------|-------|
-| **run.sh** | ⭐ **RECOMMENDED** - Start app (shows URL) | `./scripts/run.sh` |
-| start.sh | Start in background mode | `./scripts/start.sh` |
-| stop.sh | Stop background app | `./scripts/stop.sh` |
-| push_to_github.sh | Push to GitHub | `./scripts/push_to_github.sh` |
-| fix_dependencies.sh | Fix dependency issues | `./scripts/fix_dependencies.sh` |
+| **launch.sh** | ⭐ **RECOMMENDED** - Unified launcher (auto-setup) | `./scripts/launch.sh` |
+| stop.sh | Stop the application | `./scripts/stop.sh` |
+| push_to_github.sh | Push to GitHub | `./scripts/push_to_github.sh <repo-url>` |
 
-**Recommended**: Use `./scripts/run.sh` for the clearest experience.
+**Recommended**: Use `./scripts/launch.sh` - it handles everything automatically!
 
 ## 📖 Usage Guide
 

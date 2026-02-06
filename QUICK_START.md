@@ -1,11 +1,31 @@
 # Quick Start Guide
 
-## ⭐ Recommended Method
+Get up and running with a single command!
+
+## Prerequisites
+
+- Python 3.8 or higher (the script will check for you)
+- Modern web browser
+
+## Step 1: Navigate to Project Directory
 
 ```bash
 cd /Users/alainairom/Devs/vectordb-vs-sqldb
-./scripts/run.sh
 ```
+
+## Step 2: Run the Unified Launcher
+
+```bash
+./scripts/launch.sh
+```
+
+**That's it!** The unified launcher automatically handles:
+- ✅ Python version check
+- ✅ Virtual environment creation (if needed)
+- ✅ Dependency installation
+- ✅ Directory creation (data/, logs/)
+- ✅ Port conflict resolution (kills processes on port 8080)
+- ✅ Server startup
 
 The console will display:
 ```
@@ -19,7 +39,12 @@ Then open: **http://localhost:8080**
 
 ## Stop the Application
 
-Press `Ctrl+C` in the terminal
+Press `Ctrl+C` in the terminal where the app is running
+
+Or use the stop script:
+```bash
+./scripts/stop.sh
+```
 
 ## Usage
 
@@ -31,18 +56,15 @@ Press `Ctrl+C` in the terminal
    - "kitchen appliances"
    - "work from home"
 
-## To Stop
-
-Press `Ctrl+C` in the terminal where the app is running
-
 ## Troubleshooting
 
 ### If port 8080 is in use:
+The launcher automatically clears port 8080, but if needed:
 ```bash
 lsof -ti:8080 | xargs kill -9
 ```
 
-### If dependencies are missing:
+### If you need to reinstall dependencies:
 ```bash
 source venv/bin/activate
 pip install -r requirements.txt
