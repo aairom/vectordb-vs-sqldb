@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector DB vs SQL DB Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 Vector Database vs Traditional SQL Database</h1>
+            <p class="subtitle">Educational Demonstration of Search Capabilities</p>
+        </header>
+
+        <div class="controls">
+            <button id="initBtn" class="btn btn-primary">Initialize Databases</button>
+            <button id="clearBtn" class="btn btn-secondary">Clear Databases</button>
+            <button id="statsBtn" class="btn btn-info">Show Statistics</button>
+        </div>
+
+        <div id="statsPanel" class="stats-panel hidden">
+            <h2>Database Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Traditional SQL</h3>
+                    <div id="tradStats"></div>
+                </div>
+                <div class="stat-card">
+                    <h3>Vector Database</h3>
+                    <div id="vecStats"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-section">
+            <h2>Search Comparison</h2>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Enter search query (e.g., 'comfortable seating', 'exercise equipment', 'kitchen appliances')">
+                <button id="searchBtn" class="btn btn-search">Compare Search</button>
+            </div>
+            <div class="search-examples">
+                <p><strong>Try these queries:</strong></p>
+                <button class="example-btn" data-query="comfortable seating">comfortable seating</button>
+                <button class="example-btn" data-query="exercise equipment">exercise equipment</button>
+                <button class="example-btn" data-query="kitchen appliances">kitchen appliances</button>
+                <button class="example-btn" data-query="work from home">work from home</button>
+                <button class="example-btn" data-query="fitness tracking">fitness tracking</button>
+            </div>
+        </div>
+
+        <div id="resultsSection" class="results-section hidden">
+            <div class="comparison-grid">
+                <div class="result-panel">
+                    <div class="panel-header traditional">
+                        <h3>🗄️ Traditional SQL Database</h3>
+                        <p class="method-desc">Exact text matching using LIKE queries</p>
+                        <div class="execution-time">
+                            <span id="tradTime">-</span>
+                        </div>
+                    </div>
+                    <div id="tradResults" class="results-list"></div>
+                </div>
+
+                <div class="result-panel">
+                    <div class="panel-header vector">
+                        <h3>🧠 Vector Database</h3>
+                        <p class="method-desc">Semantic search using embeddings</p>
+                        <div class="execution-time">
+                            <span id="vecTime">-</span>
+                        </div>
+                    </div>
+                    <div id="vecResults" class="results-list"></div>
+                </div>
+            </div>
+
+            <div class="insights">
+                <h3>🔬 Key Differences</h3>
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <h4>Traditional SQL</h4>
+                        <ul>
+                            <li>✓ Exact keyword matching</li>
+                            <li>✓ Fast for specific terms</li>
+                            <li>✗ Misses semantic meaning</li>
+                            <li>✗ Requires exact words</li>
+                        </ul>
+                    </div>
+                    <div class="insight-card">
+                        <h4>Vector Database</h4>
+                        <ul>
+                            <li>✓ Understands context</li>
+                            <li>✓ Finds related concepts</li>
+                            <li>✓ Works with synonyms</li>
+                            <li>✗ Slightly slower</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="notification" class="notification hidden"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
