@@ -66,7 +66,7 @@ vectordb-vs-sqldb/
 │   ├── styles.css       # Styling
 │   └── app.js          # Frontend logic
 ├── scripts/             # Automation scripts
-│   ├── start.sh        # Launch application
+│   ├── launch.sh       # Unified launcher (start app)
 │   ├── stop.sh         # Stop application
 │   └── push_to_github.sh # Git automation
 ├── docs/               # Documentation
