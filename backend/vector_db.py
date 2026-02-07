@@ -1,3 +1,4 @@
+# vector_db.py
 """
 Vector Database Module using sqlite-vec
 Demonstrates semantic search capabilities using vector embeddings
